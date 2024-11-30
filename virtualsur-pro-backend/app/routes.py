@@ -324,7 +324,7 @@ def ingresar_equipo():
 
 
 @main.route('Clients', methods=['GET'])
-def get_roles():
+def get_client():
     client = Cliente.query.all()
     client_list = [{"client_id": client.client_id, "client_name": client.client_name} for client in client]
     return jsonify(client_list)
